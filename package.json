@@ -1,0 +1,29 @@
+{
+  "name": "simple-chat",
+  "version": "1.0.0",
+  "description": "Small simple chat in node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alopezm/simple-chat.git"
+  },
+  "keywords": [
+    "node",
+    "chat",
+    "express",
+    "socket.io"
+  ],
+  "author": "Anderson LM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alopezm/simple-chat/issues"
+  },
+  "homepage": "https://github.com/alopezm/simple-chat#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.0.1"
+  }
+}
