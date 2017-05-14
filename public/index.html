@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Simple Chat</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
     <div class="main">
@@ -17,11 +17,12 @@
             </ul> 
         </div>
         <form class="form" action="">
-            <input type="text" autocomplete="false" class="input"><button type="submit" class="btn">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            <input type="text" autocomplete="false" class="msg"><button type="submit" class="btn">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
         </form>
     </div>
 
     <script src="https://use.fontawesome.com/289faba067.js"></script>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+    <script src="static/main.js"></script>
 </body>
 </html>

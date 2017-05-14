@@ -6,6 +6,7 @@ body {
 .main {
     margin: 8px auto;
     max-width: 1024px;
+    padding: 0 8px;
 }
 
 .messages-wrapper {
@@ -21,12 +22,12 @@ body {
     margin: 0;
 }
 
-.messages li {
+.message {
     padding: 7px 10px;
     font-size: 1em;
 }
 
-.messages li:nth-child(2n) {
+.message:nth-child(2n) {
     background-color: rgba(0,0,0,0.1);
 }
 
@@ -42,7 +43,7 @@ body {
     font-size: 1em;
 }
 
-.input {
+.msg {
     box-sizing: border-box;
     border: 1px solid rgba(0,0,0,0.4);
     height: 35px;
