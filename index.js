@@ -4,6 +4,7 @@ const app = express();
 
 const host = 'localhost';
 const port = 3000;
+let userNumber = 0;
 
 const server = app.listen(port, host, () => { 
     console.log(`listening on http://${host}:${port}`); 
@@ -18,13 +19,19 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log('New user logged');
+    ++userNumber;
+    const user = `User ${userNumber}`;
 
     socket.on('disconnect', function(){
         console.log('user disconnected');
     });
 
-    socket.on('message', (msg) => {
-        console.log({msg});
-        io.emit('message', msg);
+    socket.on('message', (data) => {
+        const { msg } = data;
+        const res = {msg, user};
+        console.log(res);
+        if (data.msg !== '') {
+            io.emit('message', res);
+        }
     });
 });

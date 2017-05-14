@@ -6,22 +6,24 @@
     form.addEventListener('submit', onSubmit);
 
     socket.on('message', (data) => {
-        var message = getMessageNode(data.msg);
+        var message = getMessageNode(data);
         messages.appendChild(message);
     });
 
     function onSubmit (e) {
         e.preventDefault();
-        var text = msg.value;
-        if (text !== '') {
-            socket.emit('message', {
-                msg: msg.value
-            });
-        }
+        socket.emit('message', {
+            msg: msg.value
+        });
         msg.value = '';
     }
 
-    function getMessageNode(text) {
+    function formatMsg(user, text) {
+        return user + ": " + text;
+    }
+
+    function getMessageNode(data) {
+        var text = formatMsg(data.user, data.msg);
         var messageNode = document.createElement("LI");                 // Create a <li> node
         var textNode = document.createTextNode(text);
         messageNode.appendChild(textNode);
