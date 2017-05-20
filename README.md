@@ -4,7 +4,7 @@ Small simple chat in node js
 ## Instructions
 ```
     npm i
-    node .index.js
+    node index.js
 ```
 Open https://localhost:3000
 
